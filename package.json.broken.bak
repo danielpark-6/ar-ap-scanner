@@ -1,0 +1,11 @@
+﻿{
+  "name": "ar-ap-2",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev:web": "pnpm --filter web dev",
+    "build:web": "pnpm --filter web build",
+    "start:web": "pnpm --filter web start",
+    "install:all": "pnpm install -w"
+  }
+}
