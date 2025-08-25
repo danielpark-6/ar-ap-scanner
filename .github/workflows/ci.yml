@@ -16,8 +16,11 @@ jobs:
           corepack enable
           corepack prepare pnpm@latest --activate
 
-      - name: Install workspace dependencies
+      - name: Install workspace dependencies (hoisted)
         run: pnpm install -w
+
+      - name: Ensure web package deps are installed
+        run: pnpm --filter ./apps/web install
 
       - name: Build web
         run: pnpm --filter ./apps/web build
