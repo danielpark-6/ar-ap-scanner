@@ -5,10 +5,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          version: 8
-      - name: Install
-        run: corepack enable && pnpm install -w
+          node-version: 18
+
+      - name: Enable corepack and prepare pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@latest --activate
+
+      - name: Install workspace dependencies
+        run: pnpm install -w
+
       - name: Build web
         run: pnpm --filter ./apps/web build
