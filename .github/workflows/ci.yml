@@ -16,8 +16,24 @@ jobs:
           corepack enable
           corepack prepare pnpm@latest --activate
 
+      - name: Cache pnpm store
+        uses: actions/cache@v4
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
       - name: Install workspace dependencies (hoisted)
         run: pnpm install -w
+
+      - name: Cache web node_modules
+        uses: actions/cache@v4
+        with:
+          path: apps/web/node_modules
+          key: ${{ runner.os }}-web-modules-${{ hashFiles('apps/web/pnpm-lock.yaml', 'pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-web-modules-
 
       - name: Ensure web package deps are installed
         run: pnpm --filter ./apps/web install
