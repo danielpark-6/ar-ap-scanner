@@ -3,6 +3,8 @@ on: [push, pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      NODE_OPTIONS: --max_old_space_size=4096
     steps:
       - uses: actions/checkout@v4
 
@@ -11,10 +13,17 @@ jobs:
         with:
           node-version: 18
 
-      - name: Enable Corepack and activate pnpm
+      - name: Enable Corepack and activate pinned pnpm
         run: |
+          set -e
           corepack enable
-          corepack prepare pnpm@latest --activate
+          # Pin to a known-good pnpm version to avoid transient installer issues
+          for i in 1 2 3; do
+            corepack prepare pnpm@10.15.0 --activate && break || {
+              echo "corepack prepare failed (attempt $i). Sleeping and retrying..."
+              sleep $((i * 5))
+            }
+          done
 
       - name: Cache pnpm store
         uses: actions/cache@v4
@@ -24,8 +33,15 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - name: Install workspace dependencies (hoisted)
-        run: pnpm install -w
+      - name: Install workspace dependencies (hoisted) with retries
+        run: |
+          set -e
+          for i in 1 2 3; do
+            pnpm install -w --reporter=silent && break || {
+              echo "pnpm install failed (attempt $i). Sleeping and retrying..."
+              sleep $((i * 5))
+            }
+          done
 
       - name: Cache web node_modules
         uses: actions/cache@v4
@@ -36,7 +52,14 @@ jobs:
             ${{ runner.os }}-web-modules-
 
       - name: Ensure web package deps are installed
-        run: pnpm --filter ./apps/web install
+        run: |
+          set -e
+          for i in 1 2 3; do
+            pnpm --filter ./apps/web install --reporter=silent && break || {
+              echo "pnpm --filter ./apps/web install failed (attempt $i). Sleeping and retrying..."
+              sleep $((i * 5))
+            }
+          done
 
       - name: Build web
         run: pnpm --filter ./apps/web build
