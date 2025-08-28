@@ -1,15 +1,18 @@
-﻿# Node / build
+﻿# Node / pnpm
 node_modules
-.next
-.DS_Store
+.pnpm-store
+pnpm-lock.yaml
 
-# Local env
+# Next / build
+.next
+apps/web/.next
+dist
+
+# env
 .env
 .env.local
 .env.*.local
 
-# Logs
-npm-debug.log*
-pnpm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# OS / editor
+.vscode
+.DS_Store
