@@ -1,0 +1,151 @@
+build	UNKNOWN STEP	´++2025-08-25T16:12:27.4006568Z Current runner version: '2.328.0'
+build	UNKNOWN STEP	2025-08-25T16:12:27.4030788Z ##[group]Runner Image Provisioner
+build	UNKNOWN STEP	2025-08-25T16:12:27.4031519Z Hosted Compute Agent
+build	UNKNOWN STEP	2025-08-25T16:12:27.4032046Z Version: 20250821.380
+build	UNKNOWN STEP	2025-08-25T16:12:27.4032725Z Commit: 438d12cb4fe092871db9867344e3bc0bc5319035
+build	UNKNOWN STEP	2025-08-25T16:12:27.4033385Z Build Date: 2025-08-21T20:49:43Z
+build	UNKNOWN STEP	2025-08-25T16:12:27.4033962Z ##[endgroup]
+build	UNKNOWN STEP	2025-08-25T16:12:27.4034537Z ##[group]Operating System
+build	UNKNOWN STEP	2025-08-25T16:12:27.4035341Z Ubuntu
+build	UNKNOWN STEP	2025-08-25T16:12:27.4035799Z 24.04.2
+build	UNKNOWN STEP	2025-08-25T16:12:27.4036330Z LTS
+build	UNKNOWN STEP	2025-08-25T16:12:27.4036785Z ##[endgroup]
+build	UNKNOWN STEP	2025-08-25T16:12:27.4037268Z ##[group]Runner Image
+build	UNKNOWN STEP	2025-08-25T16:12:27.4037875Z Image: ubuntu-24.04
+build	UNKNOWN STEP	2025-08-25T16:12:27.4038340Z Version: 20250818.1.0
+build	UNKNOWN STEP	2025-08-25T16:12:27.4039332Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250818.1/images/ubuntu/Ubuntu2404-Readme.md
+build	UNKNOWN STEP	2025-08-25T16:12:27.4041914Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250818.1
+build	UNKNOWN STEP	2025-08-25T16:12:27.4043501Z ##[endgroup]
+build	UNKNOWN STEP	2025-08-25T16:12:27.4045534Z ##[group]GITHUB_TOKEN Permissions
+build	UNKNOWN STEP	2025-08-25T16:12:27.4048170Z Contents: read
+build	UNKNOWN STEP	2025-08-25T16:12:27.4049090Z Metadata: read
+build	UNKNOWN STEP	2025-08-25T16:12:27.4049864Z Packages: read
+build	UNKNOWN STEP	2025-08-25T16:12:27.4050623Z ##[endgroup]
+build	UNKNOWN STEP	2025-08-25T16:12:27.4053269Z Secret source: Actions
+build	UNKNOWN STEP	2025-08-25T16:12:27.4054398Z Prepare workflow directory
+build	UNKNOWN STEP	2025-08-25T16:12:27.4499000Z Prepare all required actions
+build	UNKNOWN STEP	2025-08-25T16:12:27.4553736Z Getting action download info
+build	UNKNOWN STEP	2025-08-25T16:12:27.7657501Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+build	UNKNOWN STEP	2025-08-25T16:12:27.8331944Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+build	UNKNOWN STEP	2025-08-25T16:12:27.9211894Z Download action repository 'actions/cache@v4' (SHA:0400d5f644dc74513175e3cd8d07132dd4860809)
+build	UNKNOWN STEP	2025-08-25T16:12:28.1013004Z Complete job name: build
+build	UNKNOWN STEP	2025-08-25T16:12:28.1681537Z ##[group]Run actions/checkout@v4
+build	UNKNOWN STEP	2025-08-25T16:12:28.1682315Z with:
+build	UNKNOWN STEP	2025-08-25T16:12:28.1682727Z   repository: danielpark-6/ar-ap-scanner
+build	UNKNOWN STEP	2025-08-25T16:12:28.1683369Z   token: ***
+build	UNKNOWN STEP	2025-08-25T16:12:28.1683734Z   ssh-strict: true
+build	UNKNOWN STEP	2025-08-25T16:12:28.1684102Z   ssh-user: git
+build	UNKNOWN STEP	2025-08-25T16:12:28.1684488Z   persist-credentials: true
+build	UNKNOWN STEP	2025-08-25T16:12:28.1684904Z   clean: true
+build	UNKNOWN STEP	2025-08-25T16:12:28.1685460Z   sparse-checkout-cone-mode: true
+build	UNKNOWN STEP	2025-08-25T16:12:28.1685921Z   fetch-depth: 1
+build	UNKNOWN STEP	2025-08-25T16:12:28.1686281Z   fetch-tags: false
+build	UNKNOWN STEP	2025-08-25T16:12:28.1686655Z   show-progress: true
+build	UNKNOWN STEP	2025-08-25T16:12:28.1687054Z   lfs: false
+build	UNKNOWN STEP	2025-08-25T16:12:28.1687423Z   submodules: false
+build	UNKNOWN STEP	2025-08-25T16:12:28.1687823Z   set-safe-directory: true
+build	UNKNOWN STEP	2025-08-25T16:12:28.1688483Z ##[endgroup]
+build	UNKNOWN STEP	2025-08-25T16:12:28.2729267Z Syncing repository: danielpark-6/ar-ap-scanner
+build	UNKNOWN STEP	2025-08-25T16:12:28.2730915Z ##[group]Getting Git version info
+build	UNKNOWN STEP	2025-08-25T16:12:28.2731704Z Working directory is '/home/runner/work/ar-ap-scanner/ar-ap-scanner'
+build	UNKNOWN STEP	2025-08-25T16:12:28.2732695Z [command]/usr/bin/git version
+build	UNKNOWN STEP	2025-08-25T16:12:28.2760984Z git version 2.51.0
+build	UNKNOWN STEP	2025-08-25T16:12:28.2786240Z ##[endgroup]
+build	UNKNOWN STEP	2025-08-25T16:12:28.2800084Z Temporarily overriding HOME='/home/runner/work/_temp/08ea46f0-63b1-475a-8d47-acb7f466fff1' before making global git config changes
+build	UNKNOWN STEP	2025-08-25T16:12:28.2801443Z Adding repository directory to the temporary git global config as a safe directory
+build	UNKNOWN STEP	2025-08-25T16:12:28.2811846Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ar-ap-scanner/ar-ap-scanner
+build	UNKNOWN STEP	2025-08-25T16:12:28.2844137Z Deleting the contents of '/home/runner/work/ar-ap-scanner/ar-ap-scanner'
+build	UNKNOWN STEP	2025-08-25T16:12:28.2847606Z ##[group]Initializing the repository
+build	UNKNOWN STEP	2025-08-25T16:12:28.2851865Z [command]/usr/bin/git init /home/runner/work/ar-ap-scanner/ar-ap-scanner
+build	UNKNOWN STEP	2025-08-25T16:12:28.2903867Z hint: Using 'master' as the name for the initial branch. This default branch name
+build	UNKNOWN STEP	2025-08-25T16:12:28.2906632Z hint: is subject to change. To configure the initial branch name to use in all
+build	UNKNOWN STEP	2025-08-25T16:12:28.2908083Z hint: of your new repositories, which will suppress this warning, call:
+build	UNKNOWN STEP	2025-08-25T16:12:28.2909644Z hint:
+build	UNKNOWN STEP	2025-08-25T16:12:28.2910474Z hint: 	git config --global init.defaultBranch <name>
+build	UNKNOWN STEP	2025-08-25T16:12:28.2911641Z hint:
+build	UNKNOWN STEP	2025-08-25T16:12:28.2912652Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+build	UNKNOWN STEP	2025-08-25T16:12:28.2914210Z hint: 'development'. The just-created branch can be renamed via this command:
+build	UNKNOWN STEP	2025-08-25T16:12:28.2915631Z hint:
+build	UNKNOWN STEP	2025-08-25T16:12:28.2916279Z hint: 	git branch -m <name>
+build	UNKNOWN STEP	2025-08-25T16:12:28.2917080Z hint:
+build	UNKNOWN STEP	2025-08-25T16:12:28.2918110Z hint: Disable this message with "git config set advice.defaultBranchName false"
+build	UNKNOWN STEP	2025-08-25T16:12:28.2919931Z Initialized empty Git repository in /home/runner/work/ar-ap-scanner/ar-ap-scanner/.git/
+build	UNKNOWN STEP	2025-08-25T16:12:28.2922662Z [command]/usr/bin/git remote add origin https://github.com/danielpark-6/ar-ap-scanner
+build	UNKNOWN STEP	2025-08-25T16:12:28.2952429Z ##[endgroup]
+build	UNKNOWN STEP	2025-08-25T16:12:28.2953613Z ##[group]Disabling automatic garbage collection
+build	UNKNOWN STEP	2025-08-25T16:12:28.2957524Z [command]/usr/bin/git config --local gc.auto 0
+build	UNKNOWN STEP	2025-08-25T16:12:28.2985796Z ##[endgroup]
+build	UNKNOWN STEP	2025-08-25T16:12:28.2986995Z ##[group]Setting up auth
+build	UNKNOWN STEP	2025-08-25T16:12:28.2992950Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build	UNKNOWN STEP	2025-08-25T16:12:28.3022745Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build	UNKNOWN STEP	2025-08-25T16:12:28.3271162Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build	UNKNOWN STEP	2025-08-25T16:12:28.3298407Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build	UNKNOWN STEP	2025-08-25T16:12:28.3513001Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+build	UNKNOWN STEP	2025-08-25T16:12:28.3544940Z ##[endgroup]
+build	UNKNOWN STEP	2025-08-25T16:12:28.3545880Z ##[group]Fetching the repository
+build	UNKNOWN STEP	2025-08-25T16:12:28.3561646Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +c9cd913f15b7dea8e1fb79d68e8867fb5cddbf4b:refs/remotes/origin/main
+build	UNKNOWN STEP	2025-08-25T16:12:28.7550679Z From https://github.com/danielpark-6/ar-ap-scanner
+build	UNKNOWN STEP	2025-08-25T16:12:28.7551562Z  * [new ref]         c9cd913f15b7dea8e1fb79d68e8867fb5cddbf4b -> origin/main
+build	UNKNOWN STEP	2025-08-25T16:12:28.7579050Z ##[endgroup]
+build	UNKNOWN STEP	2025-08-25T16:12:28.7579772Z ##[group]Determining the checkout info
+build	UNKNOWN STEP	2025-08-25T16:12:28.7581287Z ##[endgroup]
+build	UNKNOWN STEP	2025-08-25T16:12:28.7586593Z [command]/usr/bin/git sparse-checkout disable
+build	UNKNOWN STEP	2025-08-25T16:12:28.7625320Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+build	UNKNOWN STEP	2025-08-25T16:12:28.7652648Z ##[group]Checking out the ref
+build	UNKNOWN STEP	2025-08-25T16:12:28.7657069Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+build	UNKNOWN STEP	2025-08-25T16:12:28.7711852Z Switched to a new branch 'main'
+build	UNKNOWN STEP	2025-08-25T16:12:28.7714687Z branch 'main' set up to track 'origin/main'.
+build	UNKNOWN STEP	2025-08-25T16:12:28.7720555Z ##[endgroup]
+build	UNKNOWN STEP	2025-08-25T16:12:28.7754096Z [command]/usr/bin/git log -1 --format=%H
+build	UNKNOWN STEP	2025-08-25T16:12:28.7775567Z c9cd913f15b7dea8e1fb79d68e8867fb5cddbf4b
+build	UNKNOWN STEP	2025-08-25T16:12:28.8008675Z ##[group]Run actions/setup-node@v4
+build	UNKNOWN STEP	2025-08-25T16:12:28.8009189Z with:
+build	UNKNOWN STEP	2025-08-25T16:12:28.8009524Z   node-version: 18
+build	UNKNOWN STEP	2025-08-25T16:12:28.8009898Z   always-auth: false
+build	UNKNOWN STEP	2025-08-25T16:12:28.8010273Z   check-latest: false
+build	UNKNOWN STEP	2025-08-25T16:12:28.8010794Z   token: ***
+build	UNKNOWN STEP	2025-08-25T16:12:28.8011136Z ##[endgroup]
+build	UNKNOWN STEP	2025-08-25T16:12:28.9820916Z Found in cache @ /opt/hostedtoolcache/node/18.20.8/x64
+build	UNKNOWN STEP	2025-08-25T16:12:28.9824413Z ##[group]Environment details
+build	UNKNOWN STEP	2025-08-25T16:12:30.5582523Z node: v18.20.8
+build	UNKNOWN STEP	2025-08-25T16:12:30.5583190Z npm: 10.8.2
+build	UNKNOWN STEP	2025-08-25T16:12:30.5583641Z yarn: 1.22.22
+build	UNKNOWN STEP	2025-08-25T16:12:30.5585158Z ##[endgroup]
+build	UNKNOWN STEP	2025-08-25T16:12:30.5700273Z ##[group]Run corepack enable
+build	UNKNOWN STEP	2025-08-25T16:12:30.5700658Z [36;1mcorepack enable[0m
+build	UNKNOWN STEP	2025-08-25T16:12:30.5700988Z [36;1mcorepack prepare pnpm@latest --activate[0m
+build	UNKNOWN STEP	2025-08-25T16:12:30.5786909Z shell: /usr/bin/bash -e {0}
+build	UNKNOWN STEP	2025-08-25T16:12:30.5787219Z ##[endgroup]
+build	UNKNOWN STEP	2025-08-25T16:12:31.2406945Z Preparing pnpm@latest for immediate activation...
+build	UNKNOWN STEP	2025-08-25T16:12:31.8972344Z ##[group]Run actions/cache@v4
+build	UNKNOWN STEP	2025-08-25T16:12:31.8972650Z with:
+build	UNKNOWN STEP	2025-08-25T16:12:31.8972843Z   path: ~/.pnpm-store
+build	UNKNOWN STEP	2025-08-25T16:12:31.8973251Z   key: Linux-pnpm-store-f5e8820d8fbecf843f2ea99074a17ac4f5b7e9ab9633c7a732ea260e11fce66e
+build	UNKNOWN STEP	2025-08-25T16:12:31.8973697Z   restore-keys: Linux-pnpm-store-
+build	UNKNOWN STEP	
+build	UNKNOWN STEP	2025-08-25T16:12:31.8973943Z   enableCrossOsArchive: false
+build	UNKNOWN STEP	2025-08-25T16:12:31.8974175Z   fail-on-cache-miss: false
+build	UNKNOWN STEP	2025-08-25T16:12:31.8974381Z   lookup-only: false
+build	UNKNOWN STEP	2025-08-25T16:12:31.8974571Z   save-always: false
+build	UNKNOWN STEP	2025-08-25T16:12:31.8974755Z ##[endgroup]
+build	UNKNOWN STEP	2025-08-25T16:12:32.1435344Z Cache not found for input keys: Linux-pnpm-store-f5e8820d8fbecf843f2ea99074a17ac4f5b7e9ab9633c7a732ea260e11fce66e, Linux-pnpm-store-
+build	UNKNOWN STEP	2025-08-25T16:12:32.1501064Z ##[group]Run pnpm install -w
+build	UNKNOWN STEP	2025-08-25T16:12:32.1501368Z [36;1mpnpm install -w[0m
+build	UNKNOWN STEP	2025-08-25T16:12:32.1543834Z shell: /usr/bin/bash -e {0}
+build	UNKNOWN STEP	2025-08-25T16:12:32.1544077Z ##[endgroup]
+build	UNKNOWN STEP	2025-08-25T16:12:32.2224228Z Invalid package.json in package.json
+build	UNKNOWN STEP	2025-08-25T16:12:32.2269416Z ##[error]Process completed with exit code 1.
+build	UNKNOWN STEP	2025-08-25T16:12:32.2378149Z Post job cleanup.
+build	UNKNOWN STEP	2025-08-25T16:12:32.3295933Z [command]/usr/bin/git version
+build	UNKNOWN STEP	2025-08-25T16:12:32.3330788Z git version 2.51.0
+build	UNKNOWN STEP	2025-08-25T16:12:32.3373973Z Temporarily overriding HOME='/home/runner/work/_temp/1e19b0f9-e68f-4f8f-9d95-5418610af0ca' before making global git config changes
+build	UNKNOWN STEP	2025-08-25T16:12:32.3375776Z Adding repository directory to the temporary git global config as a safe directory
+build	UNKNOWN STEP	2025-08-25T16:12:32.3380721Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ar-ap-scanner/ar-ap-scanner
+build	UNKNOWN STEP	2025-08-25T16:12:32.3415918Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build	UNKNOWN STEP	2025-08-25T16:12:32.3448267Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build	UNKNOWN STEP	2025-08-25T16:12:32.3668709Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build	UNKNOWN STEP	2025-08-25T16:12:32.3689010Z http.https://github.com/.extraheader
+build	UNKNOWN STEP	2025-08-25T16:12:32.3701068Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+build	UNKNOWN STEP	2025-08-25T16:12:32.3731043Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build	UNKNOWN STEP	2025-08-25T16:12:32.4080647Z Cleaning up orphan processes
+
