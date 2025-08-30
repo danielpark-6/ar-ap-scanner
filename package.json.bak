@@ -7,6 +7,5 @@
                     "build:web":  "pnpm --filter web build",
                     "start:web":  "pnpm --filter web start",
                     "install:all":  "pnpm install -w"
-                },
-    "packageManager":  "pnpm@10.15.0"
+                }
 }
