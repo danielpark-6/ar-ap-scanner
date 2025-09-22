@@ -1,0 +1,3 @@
+﻿id,email,name,company,address_line1,address_city,address_postcode,country,phone
+cust-001,john@example.com,John Doe,Acme Ltd,""123 Main St"",Cairo,11511,EG,+201234567890
+cust-002,jane@example.com,Jane Smith,Smith Co,""456 Oak Ave"",Cairo,11522,EG,+201234567891
