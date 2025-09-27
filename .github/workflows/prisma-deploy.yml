@@ -1,20 +1,35 @@
-﻿name: prisma-migrate-deploy
+name: prisma-migrate-deploy
+
 on:
   workflow_dispatch:
   push:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   migrate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v2
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
         with:
           version: 10
-      - name: Install dependencies
-        run: pnpm install -w
+
+      - name: Install workspace deps (hoisted)
+        run: pnpm install -w --frozen-lockfile
+
       - name: Run Prisma migrations (deploy)
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
-        run: pnpm -w dlx prisma migrate deploy --schema=./prisma/schema.prisma
+        run: pnpm -w exec prisma migrate deploy --schema=./prisma/schema.prisma
